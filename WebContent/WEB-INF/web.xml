@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="2.5">
+  <display-name>BookStore</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>loginServlet</display-name>
+    <servlet-name>loginServlet</servlet-name>
+    <servlet-class>com.atguigu.bookstore.servlet.loginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>loginServlet</servlet-name>
+    <url-pattern>/loginServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegistServlet</display-name>
+    <servlet-name>RegistServlet</servlet-name>
+    <servlet-class>com.atguigu.bookstore.servlet.RegistServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegistServlet</servlet-name>
+    <url-pattern>/RegistServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>UserServlet</display-name>
+    <servlet-name>UserServlet</servlet-name>
+    <servlet-class>com.atguigu.bookstore.servlet.UserServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>UserServlet</servlet-name>
+    <url-pattern>/UserServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>BookServlet</display-name>
+    <servlet-name>/BookServlet</servlet-name>
+    <servlet-class>com.atguigu.bookstore.servlet.BookServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BookServlet</servlet-name>
+    <url-pattern>/BookServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet>
+		<servlet-name>Kaptcha</servlet-name>
+		<servlet-class>com.google.code.kaptcha.servlet.KaptchaServlet</servlet-class>
+
+		<!--
+			For a complete list of Init Parameters, please see:
+			http://code.google.com/p/kaptcha/wiki/ConfigParameters
+		-->
+		<init-param>
+			<param-name>kaptcha.border</param-name>
+			<param-value>no</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>kaptcha.textproducer.font.color</param-name>
+			<param-value>black</param-value>
+		</init-param>
+
+		<init-param>
+			<param-name>kaptcha.textproducer.char.space</param-name>
+			<param-value>5</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>kaptcha.image.width</param-name>
+			<param-value>80</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>kaptcha.image.height</param-name>
+			<param-value>40</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>kaptcha.textproducer.char.length</param-name>
+			<param-value>1</param-value>
+		</init-param>
+		
+		<init-param>
+			<param-name>kaptcha.textproducer.font.size</param-name>
+			<param-value>35</param-value>
+		</init-param>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Kaptcha</servlet-name>
+		<url-pattern>/Kaptcha.jpg</url-pattern>
+	</servlet-mapping>
+  
+</web-app>

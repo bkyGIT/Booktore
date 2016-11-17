@@ -1,0 +1,1 @@
+<jsp:forward page="/BookServlet?method=listBooks"></jsp:forward>
